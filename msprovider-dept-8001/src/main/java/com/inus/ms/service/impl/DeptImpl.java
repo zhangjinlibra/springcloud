@@ -22,7 +22,6 @@ public class DeptImpl implements DeptService
     @ Override
     public boolean add(Dept dept)
     {
-
         return deptDao.add(dept);
     }
 

@@ -1,7 +1,10 @@
 
 package com.inus.ms.controller;
 
+import java.io.IOException;
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,7 +23,7 @@ public class DeptController
     private DeptService deptService;
 
     @ RequestMapping("/dept/add")
-    public boolean add(@ RequestBody Dept dept)
+    public boolean add(HttpServletRequest request, @ RequestBody Dept dept) throws IOException
     {
         return deptService.add(dept);
     }

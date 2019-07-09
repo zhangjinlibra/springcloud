@@ -5,14 +5,12 @@
 
 <mapper namespace="com.inus.ms.dao.DeptDao">
 
-	<select id="add" parameterType="Dept">
-		insert into dept (name,db)
-		values(#{name},DATABASE())
-	</select>
+	<insert id="add" parameterType="Dept">
+		insert into dept (name,db) values(#{name},DATABASE())
+	</insert>
 
 	<select id="getById" resultType="Dept" parameterType="Integer">
-		select
-		no,name,db from dept where no=#{no}
+		select no,name,db from dept where no=#{no}
 	</select>
 
 	<select id="getAll" resultType="Dept">
