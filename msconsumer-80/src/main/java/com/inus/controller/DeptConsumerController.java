@@ -19,8 +19,9 @@ public class DeptConsumerController
     @ Autowired
     private RestTemplate restTemplate;
 
-    private static final String REST_URL_PROFIX = "http://msprovider";
+    private static final String REST_URL_PROFIX = "http://MSPROVIDER";
 
+    @ ResponseBody
     @ RequestMapping(value = "/consumer/dept/add")
     public boolean add(Dept dept)
     {
@@ -29,6 +30,7 @@ public class DeptConsumerController
         return true;
     }
 
+    @ ResponseBody
     @ RequestMapping(value = "/consumer/dept/get/{no}")
     public Dept get(@ PathVariable("no") int no)
     {
@@ -36,7 +38,7 @@ public class DeptConsumerController
     }
 
     @ ResponseBody
-    @ RequestMapping(value = "/consumer/dept/list")
+    @ RequestMapping(value = "/consumer/dept/list"/* , produces = {"application/json;charset=UTF-8"} */)
     public List<Dept> list()
     {
         @ SuppressWarnings("unchecked")

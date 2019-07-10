@@ -1,25 +1,29 @@
 
 package com.inus.cfgbean;
 
-import java.nio.charset.Charset;
-
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
+
+import com.netflix.loadbalancer.IRule;
+import com.rule.FooRule;
 
 @ Configuration
 public class ConfigBean
 {
 
     @ Bean
-    @ LoadBalanced
+    @ LoadBalanced // 辅助均衡, 没有就使用默认的
     public RestTemplate getRestTemplate()
     {
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.getMessageConverters().add(new StringHttpMessageConverter(Charset.forName("UTF-8")));
-        return restTemplate;
+        return new RestTemplate();
+    }
+
+    // @ Bean
+    public IRule getRule()
+    {
+        return new FooRule();
     }
 
 }

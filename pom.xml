@@ -69,5 +69,10 @@
 		<module>msprovider-dept-8001</module>
 		<module>msconsumer-80</module>
 		<module>eureka-7001</module>
+		<module>eureka-7002</module>
+		<module>eureka-7003</module>
+		<module>msprovider-dept-8002</module>
+		<module>msprovider-dept-8003</module>
+		<module>msconsumer-feign</module>
 	</modules>
 </project>

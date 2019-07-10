@@ -16,13 +16,6 @@ spring:  application:    name: msprovider
       max-total: 5                      #最大连接数
       max-wait-millis: 200              #等待连接获取最大超时时间
   
-eureka:  client:    service-url:      defaultZone: http://localhost:7001/eureka/     instance:    instance-id: msprovider-dept8001    #服务器名称修改
+eureka:  client:    service-url:      defaultZone: http://localhost1.com:7001/eureka/,http://localhost2.com:7002/eureka/,http://localhost3.com:7003/eureka/    instance:    instance-id: msprovider-dept8001    #服务器名称修改
     prefer-ip-address: true             #服务器显示IP地址
     
-    
-    
-info:
-  app.name: appName
-  company.name: inus
-  build.artifactId: $project.artifactId$
-  bulid.version: $project.version$
