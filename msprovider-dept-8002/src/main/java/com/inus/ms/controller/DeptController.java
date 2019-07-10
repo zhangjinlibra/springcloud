@@ -33,7 +33,12 @@ public class DeptController
     @ RequestMapping("/dept/get/{no}")
     public Dept get(@ PathVariable("no") Integer no)
     {
-        return deptService.get(no);
+        Dept dept = deptService.get(no);
+        if (dept == null)
+        {
+            throw new RuntimeException("该ID: @ID@没有对应的信息".replace("@ID@", String.valueOf(no)));
+        }
+        return dept;
     }
 
     @ RequestMapping("/dept/list")

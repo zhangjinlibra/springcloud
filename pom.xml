@@ -74,5 +74,8 @@
 		<module>msprovider-dept-8002</module>
 		<module>msprovider-dept-8003</module>
 		<module>msconsumer-feign</module>
+		<module>msprovider-dept-hystrix-80</module>
+		<module>msconsumer-hystrix-dashbroad</module>
+		<module>zuul-gateway-9527</module>
 	</modules>
 </project>

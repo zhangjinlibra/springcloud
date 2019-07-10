@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.inus.ms.entities.Dept;
 
-@ FeignClient(value = "MSPROVIDER")
+@ FeignClient(value = "MSPROVIDER", fallbackFactory = DeptServiceFallbackFactory.class)
 public interface DeptConsumerService
 {
 
@@ -21,4 +21,5 @@ public interface DeptConsumerService
 
     @ RequestMapping(value = "/dept/list")
     public List<Dept> list();
+
 }
