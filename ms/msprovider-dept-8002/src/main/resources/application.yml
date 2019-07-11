@@ -1,21 +1,0 @@
-server:
-  port: 8002
-  
-mybatis:  config-location: classpath:mybatis/mybatis.cfg.xml
-  type-aliases-package: com.inus.ms.entities
-  mapper-locations:  - classpath:mybatis/mapper/**/*.xml
-  
-spring:  application:    name: msprovider
-  datasource:    type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/mscloud2?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
-    username: root
-    password: root
-    dbcp2:      min-idle: 5                       #数据库连接池的最小维持连接数
-      initial-size: 5                   #初始化连接数
-      max-total: 5                      #最大连接数
-      max-wait-millis: 200              #等待连接获取最大超时时间
-  
-eureka:  client:    service-url:      defaultZone: http://localhost1.com:7001/eureka/,http://localhost2.com:7002/eureka/,http://localhost3.com:7003/eureka/    instance:    instance-id: msprovider-dept8002    #服务器名称修改
-    prefer-ip-address: true             #服务器显示IP地址
-    

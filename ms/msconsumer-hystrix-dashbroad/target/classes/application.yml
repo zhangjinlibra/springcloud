@@ -1,2 +1,0 @@
-server:  port: 9001
-      info:  name: zhangsam#management.endpoints.web.exposure.include=*management:   endpoints:     web:       exposure:         include: "*"
