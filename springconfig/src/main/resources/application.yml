@@ -2,4 +2,4 @@ server:  port: 3344
 
 spring:
   application:
-    name: config-server  cloud:    config:      server:        git:          uri: git@github.com:zhangjinlibra/springconfig.git          skip-ssl-validation: true     logging:  level:    root: info        
+    name: config-server  cloud:    config:      server:        git:          uri: https://github.com/zhangjinlibra/springconfig.git          skip-ssl-validation: true     logging:  level:    root: info        
