@@ -1,0 +1,9 @@
+#系统级配置, 服务启动时环境配置
+spring:
+  cloud:
+    config:
+      name: application2          #github资源名称
+      profile: test                #加载github资源中的dev配置到本地
+      label: master               #github分支名称
+      uri:
+      - http://localhost:3344/    #config服务器地址

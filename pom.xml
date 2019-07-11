@@ -78,5 +78,6 @@
 		<module>msconsumer-hystrix-dashbroad</module>
 		<module>zuul-gateway-9527</module>
 		<module>springconfig</module>
+		<module>springconfig-client-3355</module>
 	</modules>
 </project>
