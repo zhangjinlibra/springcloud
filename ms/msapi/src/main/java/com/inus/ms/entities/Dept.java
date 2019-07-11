@@ -6,7 +6,6 @@ import java.io.Serializable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
@@ -17,7 +16,6 @@ import lombok.experimental.Accessors;
 @ AllArgsConstructor
 @ NoArgsConstructor
 @ Data
-@ ToString
 @ Accessors(chain = true)
 public class Dept implements Serializable
 {
@@ -26,5 +24,7 @@ public class Dept implements Serializable
     private int no;
     private String name;
     private String db;
+    
+    
 
 }
