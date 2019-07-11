@@ -77,5 +77,6 @@
 		<module>msprovider-dept-hystrix-80</module>
 		<module>msconsumer-hystrix-dashbroad</module>
 		<module>zuul-gateway-9527</module>
+		<module>springconfig</module>
 	</modules>
 </project>

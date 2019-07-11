@@ -2,13 +2,23 @@ server:
   port: 9527
   
 spring:  application:    name: zuul-gateway
-   
+     
+zuul:
+  prefix: /inus                   #服务统一前缀
+  routes:
+    baidu:
+      path: /baidu/**             #服务转发
+      url: https://www.baidu.com/ #/inus/baidu 转发到 baidu.com    dpte-service:
+      path: /msdept/**            #route新映射
+      service-id: msprovider      #映射服务
+  ignored-services:               #忽略原始服务名称  - "*"
+
+logging:  level:    root: info
     
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost1.com:7001/eureka/,http://localhost2.com:7002/eureka/,http://localhost3.com:7003/eureka/   
-  instance:
+      defaultZone: http://localhost1.com:7001/eureka/,http://localhost2.com:7002/eureka/,http://localhost3.com:7003/eureka/    instance:
     instance-id: zuul-gateway9527       #服务器名称修改
     prefer-ip-address: true             #服务器显示IP地址
     
