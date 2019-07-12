@@ -66,6 +66,7 @@
 		<module>zuul-gateway-9527</module>
 		<module>springconfig</module>
 		<module>springconfig-client-3355</module>
+		<module>springconfig-svn-3366</module>
 	</modules>
 
 	<build>
