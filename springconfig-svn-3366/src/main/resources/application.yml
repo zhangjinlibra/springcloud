@@ -1,0 +1,18 @@
+server:
+  port: 3366
+
+spring:
+  application:
+    name: config-svn  cloud:    config:      server:        svn:
+          uri: svn://192.168.67.135/springconfig  #svn项目根目录          username: inus                    #svn用户名
+          password: root                    #svn密码
+          default-label: config     
+  profiles:    active: subversion                      #必须指定
+    
+  
+logging:  level: 
+    root: debug
+    
+info:
+  name: config-svn
+  
