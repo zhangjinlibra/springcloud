@@ -7,38 +7,19 @@
 		<artifactId>ms</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>springconfig</artifactId>
+	<artifactId>eureka-7001</artifactId>
+	<packaging>jar</packaging>
 
 	<dependencies>
-		<dependency>
-			<groupId>com.inus</groupId>
-			<artifactId>msapi</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-config-server</artifactId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
-		<!-- <dependency> <groupId>org.eclipse.jgit</groupId> <artifactId>org.eclipse.jgit</artifactId> 
-			</dependency> <dependency> <groupId>com.github.ben-manes.caffeine</groupId> 
-			<artifactId>caffeine</artifactId> </dependency> -->
-
-
-
-		<!-- 热部署 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>springloaded</artifactId>
@@ -48,12 +29,14 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
-
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
-		<finalName>config-server-3344</finalName>
+		<finalName>eureka-7001</finalName>
 	</build>
 
 </project>
