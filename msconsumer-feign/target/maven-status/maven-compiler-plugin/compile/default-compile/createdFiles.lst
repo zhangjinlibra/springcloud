@@ -1,0 +1,5 @@
+com\rule\FooRule.class
+com\rule\FooLoadBalancer.class
+com\inus\DeptConsumer80_Feign_App.class
+com\inus\cfgbean\ConfigBean.class
+com\inus\controller\DeptConsumerController.class

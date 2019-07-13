@@ -35,7 +35,11 @@
 		</dependency>
 	</dependencies>
 
+
+
 	<build>
+		<plugins>
+		</plugins>
 		<finalName>eureka-7001</finalName>
 	</build>
 
